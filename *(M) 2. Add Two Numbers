@@ -1,0 +1,93 @@
+class Program
+{
+    static void Main(string[] args)
+    {  
+        //Test Main For LeetCode AddTwoNumbers
+        ListNode l1 = new ListNode(2);
+        ListNode l2 = new ListNode(5);
+        l1.next = new ListNode(4);
+        l1.next.next = new ListNode(3);
+        l2.next = new ListNode(6);
+        l2.next.next = new ListNode(4);
+        AddTwoNumbers(l1, l2);
+    }
+    ///<summary>Definition for singly-linked list.</summary>
+    public class ListNode
+    {
+        public int val;
+        public ListNode next;
+        public ListNode(int x) => val = x;
+    }
+    // ///<summary>My First Solution to the Problem (Only worked for 1/2 of cases).</summary>
+    // public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+    // {
+    //     List<int> num1 = new List<int>();
+    //     List<int> num2 = new List<int>();
+    //     ListNode temp = new ListNode(0);
+
+    //     //Adding the nodes to their lists
+    //     temp = l1;
+    //     Console.WriteLine(temp.val);
+    //     while(temp != null)
+    //     {
+    //         num1.Add(temp.val);
+    //         temp = temp.next;
+    //     }
+    //     temp = l2;
+    //     while (temp != null)
+    //     {
+    //         num2.Add(temp.val);
+    //         temp = temp.next;
+    //     }
+
+    //     //Adding the numbers
+    //     int num = 0;
+    //     Console.WriteLine(num1.Count);
+    //     for (int i = num1.Count - 1; i >= 0; i--)
+    //     {
+    //         num += (num1[i] * (int)Math.Pow(10, i));
+    //     }
+    //     for (int i = num2.Count - 1; i >= 0; i--)
+    //     {
+    //         num += (num2[i] * (int)Math.Pow(10, i));
+    //     }
+
+    //     //Converting Back Into Linked List
+    //     ListNode rtnList = new ListNode(num);
+    //     Console.WriteLine($"The number to begin with is {num}");
+    //     ListNode ptr = rtnList;
+    //     int counter = 0;
+    //     while(num > 0)
+    //     {
+    //         int digit = num % 10;
+    //         Console.WriteLine($"Going into list: {digit}");
+    //         ptr.val = digit;
+    //         if(num >= 10)
+    //         {
+    //             ptr.next = new ListNode(num / 10);
+    //             ptr = ptr.next;
+    //         }
+    //         num /= 10;
+    //         Console.WriteLine($"Number {num}");
+    //         counter++;
+
+    //         //Printing nodes in list:
+    //         ListNode tempPtr = rtnList;
+    //         int c = 0;
+    //         while (tempPtr != null)
+    //         {
+    //             c++;
+    //             Console.WriteLine($"Node {c} holds value {tempPtr.val}");
+    //             tempPtr = tempPtr.next;
+    //         }
+    //     }
+    //     Console.WriteLine($"The loop ran {counter} times");
+    //     return rtnList;
+    // }
+    ///<summary>My Second Solution to the Problem.</summary>
+    public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+    {
+        
+    }
+
+}
